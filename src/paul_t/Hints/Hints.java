@@ -59,6 +59,6 @@ public class Hints extends JavaPlugin {
 
     public static int getBuild()
     {
-    	return 1;
+    	return Version.VERSION;
     }
 }

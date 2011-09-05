@@ -11,7 +11,6 @@
         <antcall target="clean"/>
         <mkdir dir="${build}"/>
 		<mkdir dir="${bin}"/>
-	<antcall target="version"/>
 
       </target>
      
@@ -23,18 +22,7 @@
                 <pathelement location="${libs}/craftbukkit-0.0.1-SNAPSHOT.jar"/>
                 </classpath>
         </javac>
-      </target>
-     
-<target name="version" description="Create Version.java">
-    <echo file="src/paul_t/Hints/Version.java" message="package ${package.name};${line.separator}" />
-    <echo file="src/paul_t/Hints/Version.java" append="true" message="public final class Version {${line.separator}" />
-    <echo file="src/paul_t/Hints/Version.java"
-          append="true"
-          message=" public static String VERSION=&quot;${buildtime}&quot;;${line.separator}" />
-    <echo file="src/${package.dir}/Version.java" append="true" message="}${line.separator}" />
-    <echo message="BUILD ${buildtime}" />
-</target>
-     
+      </target>     
 
       <target name="dist" depends="core" description="generate the distribution" >
         <jar jarfile="bin/Hints.jar" basedir="${build}" encoding="Cp1252">

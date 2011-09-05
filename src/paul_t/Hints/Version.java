@@ -1,3 +1,4 @@
-package ${package.name};
+package paul_t.Hints;
 public final class Version {
- public static String VERSION="${buildtime}";
+ public static int VERSION=1;
+}
