@@ -1,0 +1,9 @@
+\bin
+/bin
+.project
+.classpath
+\build
+/build
+\doc
+/doc
+Hints.jar
